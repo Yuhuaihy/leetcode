@@ -15,3 +15,13 @@ class Solution {
      return false;   
     }
 }
+/////use hashset
+//hashset contains unique elements
+public boolean containsNearbyDuplicate(int[] nums, int k) {
+        Set<Integer> set = new HashSet<Integer>();
+        for(int i = 0; i < nums.length; i++){
+            if(i > k) set.remove(nums[i-k-1]);   // remove first element , k-size set
+            if(!set.add(nums[i])) return true;  // when can't add, same element appears
+        }
+        return false;
+ }

@@ -8,3 +8,21 @@
 //82 + 22 = 68
 //62 + 82 = 100
 //12 + 02 + 02 = 1
+
+
+// non-happy numbers reach a cycle
+class Solution(object):
+    def Square(self,n):
+        return int(n)*int(n)        
+    def Happy(self,n):
+        return sum(map(self.Square,list(str(n))))
+        
+    def isHappy(self, n):    
+        numberSet=set()
+        while (n>1) and (n not in numberSet):        
+            numberSet.add(n)
+            n=self.Happy(n)
+        if(n == 1):
+            return True
+        else:
+            return False

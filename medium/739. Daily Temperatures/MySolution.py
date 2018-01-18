@@ -7,9 +7,11 @@ class Solution(object):
         result = [0]*len(temperatures)
         stack = []
         for i in range(len(temperatures)):
-            while stack and stack[-1][0] < temperatures[i]:
-                index = stack[-1][1]
+            while stack and temperatures[stack[-1]] < temperatures[i]:
+                index = stack[-1]
                 result[index] = i - index
                 stack.pop()
-            stack.append([temperatures[i],i])
+            stack.append(i)
         return result
+      
+            

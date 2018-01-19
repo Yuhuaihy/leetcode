@@ -26,4 +26,5 @@ class Solution(object):
   # i is the index of repeated element (2nd)
   # leng = max(leng, i - begin)
   # begin becomes the index of first repeated element + 1, then find repeated element in list[begin:i]
+    # no extra space
    

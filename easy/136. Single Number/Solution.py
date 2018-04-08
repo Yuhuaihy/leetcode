@@ -9,6 +9,7 @@ class Solution(object):
         result = nums[0]
         for i in range (1,len(nums)):
             result = result^nums[i]
+         # return reduce(lambda x,y:x^y,nums)
         return result
     
     

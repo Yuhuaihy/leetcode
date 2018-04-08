@@ -23,3 +23,5 @@ class Solution(object):
            
         
         return list(reversed(result))
+###dfs: stack
+##bfs: quene

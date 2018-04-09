@@ -8,7 +8,7 @@ class Solution(object):
         for n in nums:
             if n in d.keys():
                 d[n] = d[n] + 1
-                
+             ##nums.count(n)   
             else:
                 d[n] = 1
                 

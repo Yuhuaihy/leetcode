@@ -12,3 +12,15 @@ class Solution:
             result += int(i) * pow(2,count)
             count += 1
         return result
+    
+    
+     n = bin(n)
+        s = n[2:]
+        s = s.zfill(32)
+        result = ""
+        for i in range(32):
+            result = s[i] + result
+        
+        
+        n = int(result,2)
+        return n

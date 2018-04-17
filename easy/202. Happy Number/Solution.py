@@ -26,3 +26,23 @@ class Solution(object):
             return True
         else:
             return False
+
+        
+  class Solution(object):
+    def isHappy(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        l = []
+        while(n):
+            s = str(n)
+            n = sum([int(x) ** 2 for x in s])
+            if n not in l:
+                l.append(n)
+            else:
+                break
+            
+        return n == 1
+        
+        
